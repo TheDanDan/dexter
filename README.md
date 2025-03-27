@@ -19,7 +19,7 @@ npx hardhat console --network buildbear
 
 In the console:
 ```
-let dex = await ethers.getContractAt("DEX","0x410A0A1eF5F014c276D77e45f255Ba652d4A1520");
+let dex = await ethers.getContractAt("DEX","0x32B4A0383a1b7456068b6adB14253fdC78098Ab4");
 ```
 
 Get quote for WBTC -> USDC
@@ -30,4 +30,9 @@ await dex.getQuote(1, 10000000, false);
 Get quote for USDC -> WBTC
 ```
 await dex.getQuote(1, 10000000, true);
+```
+
+Testing
+```
+await dex.getQuoteWETH(10000, "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14", "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238", 3000);
 ```

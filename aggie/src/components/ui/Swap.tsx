@@ -34,7 +34,7 @@ const tokens: Token[] = [
   { id: "usdc", name: "USD Coin", symbol: "USDC", logo: "💵" },
 ];
 
-export const TokenSwap = () => {
+export const Swap = () => {
   const [fromToken, setFromToken] = useState<Token>(tokens[0]);
   const [toToken, setToToken] = useState<Token>(tokens[1]);
   const [fromAmount, setFromAmount] = useState<string>("");

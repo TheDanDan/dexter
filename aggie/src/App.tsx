@@ -20,7 +20,7 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { TopNav } from "./components/ui/TopNav";
-import Swap from "./components/ui/Swap";
+import { Swap } from "./components/ui/Swap";
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',

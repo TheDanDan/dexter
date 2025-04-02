@@ -160,7 +160,7 @@ async function main() {
 
         const amountOut2 = await dex.getFunction("getQuoteUni").staticCall(
             1,
-            amountIn,
+            1,
             true
         );
         console.log("Quote output for 1 WETH → USDC in 1 second:", ethers.formatUnits(amountOut2, 6), "USDC");

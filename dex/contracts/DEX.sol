@@ -56,16 +56,6 @@ contract DEX {
         return price;
     }
 
-    // function getQuoteCurveOracle(uint256 token) external view returns (uint256) {
-    //     uint256 price = CurvePool(curvePool).price_oracle(token);
-    //     return price;
-    // }
-
-    // function getQuoteCurve(int128 token, uint256 amount) external view returns (uint256) {
-    //     uint256 price = CurvePool(curvePool).get_dy(0, token, amount);
-    //     return price;
-    // }
-
     function getQuoteWETH(
         uint256 amountIn,
         address tokenIn,
@@ -86,4 +76,15 @@ contract DEX {
         emit Quote(tokenIn, tokenOut, amountIn, amountOut);
         return amountOut;
     }
+
+
+    // function getQuoteCurveOracle(uint256 token) external view returns (uint256) {
+    //     uint256 price = CurvePool(curvePool).price_oracle(token);
+    //     return price;
+    // }
+
+    // function getQuoteCurve(int128 token, uint256 amount) external view returns (uint256) {
+    //     uint256 price = CurvePool(curvePool).get_dy(0, token, amount);
+    //     return price;
+    // }
 }

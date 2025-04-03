@@ -5,8 +5,8 @@ export const TopNav = () => {
     return (
         <>
             <div className="flex flex-row p-4 justify-between">
-                <div className='flex flex-row'>
-                    <img src={logo} alt="Logo" className="w-6 h-6" />
+                <div className='flex flex-row items-center'>
+                    <img src={logo} alt="Logo" className="w-10 h-10" />
                     <div className="text-2xl font-bold text-white px-4">
                         Aggie
                     </div>

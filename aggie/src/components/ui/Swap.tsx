@@ -194,7 +194,7 @@ export const Swap = () => {
           </div>
 
           {/* To token */}
-          <div className="bg-y-100 dark:bg-neutral-800/50 rounded-xl p-4 mb-4">
+          <div className="bg-y-100 dark:bg-neutral-800/50 rounded-xl p-4 mb-4 pb-10">
             <CardHeader className="text-neutral-400 w-1/2 px-0">
               You receive
             </CardHeader>

@@ -5,7 +5,6 @@ import {
   getDefaultConfig,
   RainbowKitProvider,
   darkTheme,
-  midnightTheme,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
@@ -42,9 +41,10 @@ function App() {
             fontStack: 'system',
             overlayBlur: 'small',
           })}>
-            <TopNav />
-            <div className="flex flex-col items-center justify-center min-h-svh">
-              <Swap />
+            <div className="h-screen">
+              <TopNav />
+              
+                <Swap />
             </div>
           </RainbowKitProvider>
         </QueryClientProvider>

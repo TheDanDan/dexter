@@ -1,9 +1,9 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-    const dexAddress = "0x2aa8Fb5b1D039acEEde9412b2960CeaCdE114206";
-    const ethAddress = "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14";
-    const usdcAddress = "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238";
+    const quoteAddress = "0xF051C1Da4798290bb258331dEF69629D29743f0F";
+    const ethAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+    const usdcAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 
     const dexAbi = [
         {
@@ -144,7 +144,7 @@ async function main() {
         }
     ];
 
-    const dex = new ethers.Contract(dexAddress, dexAbi, ethers.provider);
+    const dex = new ethers.Contract(quoteAddress, dexAbi, ethers.provider);
 
     const fee = 3000; // 0.3% pool
     const amountIn = ethers.parseUnits("1", 18); // 1 WETH
@@ -157,13 +157,6 @@ async function main() {
             fee
         );
         console.log("Quote output for 1 WETH → USDC:", ethers.formatUnits(amountOut, 6), "USDC");
-
-        const amountOut2 = await dex.getFunction("getQuoteUni").staticCall(
-            1,
-            1,
-            true
-        );
-        console.log("Quote output for 1 WETH → USDC in 1 second:", ethers.formatUnits(amountOut2, 6), "USDC");
     } catch (error) {
         console.error("Error fetching quote:", error);
     }
